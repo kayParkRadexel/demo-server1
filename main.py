@@ -3,11 +3,11 @@ from fastapi import FastAPI
 app = FastAPI()
 
 
-@app.get("/")
+@app.get("/service1/")
 async def root():
     return {"message": "Hello World, this is server 1"}
 
 
-@app.get("/be1", status_code=200)
+@app.get("/service1/be1", status_code=200)
 async def be1():
     return {"message": "Hello World, this is server 1"}
